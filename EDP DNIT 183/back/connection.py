@@ -54,6 +54,10 @@ F = bdConfiguration.DadosD2()
 AF1 = float(F[5])
 BF1 = float(F[6])
 
+cof183=bdConfiguration.dados_d3()
+cof183a=float(cof183[2])
+cof183b=float(cof183[3])
+
 #-------------------------------------------------------------------
 def connect(DISCREP):
     print ('connect')
@@ -482,7 +486,7 @@ def ColetaI(valores,ensaio):
             y = float(Array[1])*0.00005792-0.00664289 #deslocamento   #salvar esses coeficientes em bdconfiguration
             y1v = float(Array[2])           #tensão
             Ind = float(Array[3])           #sensor indutivo
-            pis = float(Array[4])*AE1+BE1   #pistão
+            pis = float(Array[4])*cof183a+cof183b   #pistão
             sts = int(Array[5])             #status
             glp = int(Array[6])             #golpe atual
             ntglp = int(Array[7])           #golpe total
